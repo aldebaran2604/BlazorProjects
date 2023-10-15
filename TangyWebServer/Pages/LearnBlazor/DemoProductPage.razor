@@ -5,24 +5,7 @@
     <div class="row">
         @foreach(var product in Products)
         {
-            <div class="bg-light border m-1 col-5">
-                <h4 class="text-secondary">Product - @product.Id</h4>
-                Name - @product.Name<br />
-                Show properties: <input type="checkbox" @bind-value="product.IsActive" checked="@(product.IsActive? "checked" : null)" />
-                
-                @if (product.IsActive)
-                {
-                    @foreach (var property in product.ProductProperties)
-                    {
-                        <p>
-                            @property.Key - @property.Value
-                        </p>
-                    }
-                }
-                <br />
-                <input type="button" class="btn btn-danger" value="Delete" />
-                <input type="button" class="btn btn-success" value="Edit" />
-            </div>
+            <_IndividualProduct Product="product" />
         }
     </div>
 </div>
