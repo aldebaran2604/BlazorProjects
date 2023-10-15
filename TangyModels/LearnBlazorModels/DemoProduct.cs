@@ -7,5 +7,5 @@ public class DemoProduct
     public decimal Price { get; set; }
     public bool IsActive { get; set; }
 
-    public IEnumerable<DemoProductProp> ProductProperties { get; set; }
+    public List<DemoProductProp> ProductProperties { get; set; }
 }
